@@ -25,10 +25,7 @@ namespace GwiezdnaFlota
             Graphics = GamePanel.CreateGraphics();
             Pen = new Pen(Color.Red, 3);
         }
-        public void test()
-        {
 
-        }
         public void Game()
         {
             while (GameStatus.game)
@@ -71,6 +68,9 @@ namespace GwiezdnaFlota
                 shooting = false;
         }
         //mouse movement and shooting//            
-        
+        public void testowametoda()
+        {
+
+        }
     }
 }
