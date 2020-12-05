@@ -24,7 +24,7 @@ namespace GwiezdnaFlota.Models
 
         public bool ReachedBase()
         {
-            if (x < 30)
+            if (this.x < 30)
                 return true;
             else
                 return false;
