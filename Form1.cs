@@ -25,10 +25,7 @@ namespace GwiezdnaFlota
             Graphics = GamePanel.CreateGraphics();
             Pen = new Pen(Color.Red, 3);
         }
-        public void test()
-        {
 
-        }
         public void Game()
         {
             while (GameStatus.game)
