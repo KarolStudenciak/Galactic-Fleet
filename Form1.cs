@@ -26,29 +26,18 @@ namespace GwiezdnaFlota
             Pen = new Pen(Color.Red, 3);
         }
 
-        public void Game()
-        {
-            while (GameStatus.game)
-            {
-                if (GameStatus.level == 1)
-                {
-
-                }
-            }
-        }
-
         //menu controls//
         private void RestartLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.game = false;
             GameStatus.ResetPoints();
-            Game();
+            GameStatus.Game();
         }
 
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.NextLevel();
-            Game();
+            GameStatus.Game();
         }
         //menu controls//
 
@@ -56,13 +45,19 @@ namespace GwiezdnaFlota
         private void GamePanel_MouseClick(object sender, MouseEventArgs e)
         {
             if (shooting != true) return;
-            Graphics.DrawLine(Pen, 30, 453, e.X, e.Y);
+
+            var Laser = new Laser(e.X, e.Y, Pen, Graphics);
+
+            Laser.currX = pictureBox1.Bounds.Right;
+            Laser.currY = pictureBox1.Bounds.Top;
+
+            Laser.Shoot();
             Refresh();
         }
 
         private void GamePanel_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= 30)
+            if (e.X >= pictureBox1.Bounds.Right)
                 shooting = true;
             else
                 shooting = false;

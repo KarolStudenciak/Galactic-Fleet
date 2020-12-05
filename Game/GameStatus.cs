@@ -18,6 +18,17 @@ namespace GwiezdnaFlota.Game
 
         }
 
+        public void Game()
+        {
+            while (game)
+            {
+                if (level == 1)
+                {
+
+                }
+            }
+        }
+
         public void ResetPoints()
         {
             points = 0;

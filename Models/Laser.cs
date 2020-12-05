@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
-    class Laser
+    class Laser 
     {
         public int x, y;
         public int currX, currY;
-
-        public Laser()
+        public int dx = 10, dy = 10;
+        Graphics line;
+        Pen pen;
+        public Laser(int x, int y, Pen pen, Graphics line)
         {
-
+            this.x = x;
+            this.y = y;
+            this.pen = pen;
+            this.line = line;
         }
 
         public void PlaySound()
@@ -30,7 +37,7 @@ namespace GwiezdnaFlota.Models
 
         public void Shoot()
         {
-
+            line.DrawLine(pen, currX, currY, x, y);
         }
     }
 }
