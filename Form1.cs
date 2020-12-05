@@ -68,6 +68,9 @@ namespace GwiezdnaFlota
                 shooting = false;
         }
         //mouse movement and shooting//            
-        
+        public void testowametoda()
+        {
+
+        }
     }
 }
