@@ -1,32 +1,23 @@
-﻿using System;
+﻿using GwiezdnaFlota.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Game
 {
-    class GameStatus
+    class GameStatus 
     {
         public int points = 10;
         public int level;
         public bool game = true;
-
+      
         public GameStatus()
         {
 
-        }
-
-        public void Game()
-        {
-            while (game)
-            {
-                if (level == 1)
-                {
-
-                }
-            }
         }
 
         public void ResetPoints()

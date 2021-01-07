@@ -18,6 +18,9 @@ namespace GwiezdnaFlota
         private readonly Graphics Graphics;
         private readonly Pen Pen;
 
+        private List<Ally> Allies = new List<Ally>();
+        private List<Enemy> Enemies = new List<Enemy>();
+
         GameStatus GameStatus = new GameStatus();
         public GameWindow()
         {
@@ -31,13 +34,18 @@ namespace GwiezdnaFlota
         {
             GameStatus.game = false;
             GameStatus.ResetPoints();
-            GameStatus.Game();
+            Game();
         }
 
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.NextLevel();
-            GameStatus.Game();
+            GameStatus.ResetPoints();
+            //Game();
+
+            var picture = new Ally(300, 200);
+          
+            GamePanel.Controls.Add(picture);
         }
         //menu controls//
 
@@ -63,9 +71,15 @@ namespace GwiezdnaFlota
                 shooting = false;
         }
         //mouse movement and shooting//            
-        public void testowametoda()
+        public void Game()
         {
+            while (GameStatus.game)
+            {
+                if (GameStatus.level == 1)
+                {
 
+                }
+            }
         }
     }
 }

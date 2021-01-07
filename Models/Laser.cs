@@ -37,7 +37,13 @@ namespace GwiezdnaFlota.Models
 
         public void Shoot()
         {
-            line.DrawLine(pen, currX, currY, x, y);
+            //while (true)
+            //{
+                line.DrawLine(pen, currX, currY, x-dx, y-dy);
+            //    currX = x - dx;
+            //    currY = y-dy;
+            //}
+
         }
     }
 }
