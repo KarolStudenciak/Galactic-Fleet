@@ -11,7 +11,7 @@ namespace GwiezdnaFlota.Game
 {
     class GameStatus 
     {
-        public int points = 10;
+        public int points;
         public int level;
         public bool game = true;
       
@@ -32,7 +32,7 @@ namespace GwiezdnaFlota.Game
 
         public void SaveScore()
         {            
-            StreamWriter str = new StreamWriter(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Wyniki.txt");
+            StreamWriter str = new StreamWriter(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Wyniki.txt");
             int sesja = 0;
 
             using (str)

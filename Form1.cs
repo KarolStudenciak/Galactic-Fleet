@@ -37,6 +37,19 @@ namespace GwiezdnaFlota
             Game();
         }
 
+        private void pb_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            GamePanel.Controls.Remove(clickedPictureBox);
+            clickedPictureBox.Dispose();
+
+            if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 100;
+            if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
+            GameStatus.SaveScore();
+
+            Refresh();
+        }
+
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.NextLevel();
@@ -44,8 +57,13 @@ namespace GwiezdnaFlota
             //Game();
 
             var picture = new Ally(300, 200);
-          
+            var picture2 = new Ally(400, 400);
+            Allies.Add(picture);
+            Allies.Add(picture2);
+            
             GamePanel.Controls.Add(picture);
+            GamePanel.Controls.Add(picture2);
+            picture.MoveX();
         }
         //menu controls//
 
@@ -58,7 +76,19 @@ namespace GwiezdnaFlota
 
             Laser.currX = pictureBox1.Bounds.Right;
             Laser.currY = pictureBox1.Bounds.Top;
+            foreach (Ally al in Allies)
+            {
+                if (e.X >= al.Left && e.X <= al.Right)
+                {
+                    GameStatus.points -= 10;
+                    GameStatus.SaveScore();
+                    GamePanel.Controls.Remove(al);
+                    al.Dispose();
+                    //   Laser.Shoot();
+                    Refresh();
+                }
 
+            }
             Laser.Shoot();
             Refresh();
         }
@@ -73,6 +103,7 @@ namespace GwiezdnaFlota
         //mouse movement and shooting//            
         public void Game()
         {
+            
             while (GameStatus.game)
             {
                 if (GameStatus.level == 1)

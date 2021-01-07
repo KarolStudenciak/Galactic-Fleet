@@ -16,6 +16,9 @@ namespace GwiezdnaFlota.Models
 
         public Ally(int x, int y)
         {
+            this.x = x;
+            this.y = y;
+            this.Name = "pb";
             this.Location = new Point(x, y);
             this.Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.jpg");
             this.Size = new Size(32, 32);
@@ -35,6 +38,13 @@ namespace GwiezdnaFlota.Models
         {
             Point result = new Point(this.currX, this.currY);
             return result;
+        }
+
+        public void MoveX()
+        {
+           
+                this.Location = new Point(x + 100, y);
+           
         }
     }
 }
