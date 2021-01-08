@@ -9,33 +9,29 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
-    class Enemy : PictureBox
+    public class Enemy : PictureBox
     {
         public int x, y;
         public int currX, currY;
         public bool isHit = false;
+        public bool reachedBase = false;
 
         public Enemy(int x, int y)
         {
             this.Location = new Point(x, y);
             this.Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemy.jpg");
             this.Size = new Size(32, 32);
+            SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        public bool ReachedBase()
+        public void ReachedBase()
         {
-            var position = GetPosition();
+            var position = Location;
 
             if (position.X < 30)
-                return true;
+                reachedBase = true;
             else
-                return false;
-        }
-
-        public Point GetPosition()
-        {
-            Point result = new Point(this.currX, this.currY);
-            return result;
+                reachedBase = false;
         }
     }
 }

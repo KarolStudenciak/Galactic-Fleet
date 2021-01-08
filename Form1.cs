@@ -13,13 +13,16 @@ using System.Windows.Forms;
 namespace GwiezdnaFlota
 {
     public partial class GameWindow : Form
-    {
+    {       
+        bool deployed = false;
         bool shooting = false;
         private readonly Graphics Graphics;
         private readonly Pen Pen;
+        readonly Random r = new Random();
+        Timer GenTim = new Timer();
 
-        private List<Ally> Allies = new List<Ally>();
-        private List<Enemy> Enemies = new List<Enemy>();
+        public List<Ally> Allies = new List<Ally>();
+        public List<Enemy> Enemies = new List<Enemy>();
 
         GameStatus GameStatus = new GameStatus();
         public GameWindow()
@@ -27,6 +30,29 @@ namespace GwiezdnaFlota
             InitializeComponent();
             Graphics = GamePanel.CreateGraphics();
             Pen = new Pen(Color.Red, 3);
+
+            GenTim.Tick += new EventHandler(TimTickGenerateObjects);
+            GenTim.Interval = 2000;
+            GenTim.Start();
+
+            for(int i = 0; i < 30; i++)
+            {
+                var ally = new Ally(r.Next(300,600), r.Next(300, 600));
+                var enemy = new Enemy(100, 100);
+
+                Allies.Add(ally);
+                Enemies.Add(enemy);
+                //GamePanel.Controls.Add(ally);
+                //GamePanel.Controls.Add(enemy);
+            }
+        }
+
+        private void TimTickGenerateObjects(object sender, EventArgs e)
+        {
+            if (GamePanel.Controls.Count == 1) GenTim.Stop();
+
+            var npc = Allies[r.Next(0, 29)];
+            GamePanel.Controls.Add(npc);
         }
 
         //menu controls//
@@ -34,7 +60,7 @@ namespace GwiezdnaFlota
         {
             GameStatus.game = false;
             GameStatus.ResetPoints();
-            Game();
+            GenTim.Start();
         }
 
         private void pb_Click(object sender, EventArgs e)
@@ -58,12 +84,13 @@ namespace GwiezdnaFlota
 
             var picture = new Ally(300, 200);
             var picture2 = new Ally(400, 400);
+            var picture3 = new Ally(200, 200);
             Allies.Add(picture);
             Allies.Add(picture2);
-            
+            Allies.Add(picture3);
+
             GamePanel.Controls.Add(picture);
             GamePanel.Controls.Add(picture2);
-            picture.MoveX();
         }
         //menu controls//
 
@@ -76,6 +103,9 @@ namespace GwiezdnaFlota
 
             Laser.currX = pictureBox1.Bounds.Right;
             Laser.currY = pictureBox1.Bounds.Top;
+
+            Laser.Shoot();
+
             foreach (Ally al in Allies)
             {
                 if (e.X >= al.Left && e.X <= al.Right)
@@ -83,13 +113,13 @@ namespace GwiezdnaFlota
                     GameStatus.points -= 10;
                     GameStatus.SaveScore();
                     GamePanel.Controls.Remove(al);
-                    al.Dispose();
+                   // al.Dispose();
                     //   Laser.Shoot();
                     Refresh();
                 }
 
             }
-            Laser.Shoot();
+            Console.WriteLine(Allies.Count);
             Refresh();
         }
 
@@ -103,12 +133,14 @@ namespace GwiezdnaFlota
         //mouse movement and shooting//            
         public void Game()
         {
-            
             while (GameStatus.game)
             {
                 if (GameStatus.level == 1)
                 {
-
+                    foreach(Ally al in Allies)
+                    {
+                        GamePanel.Controls.Add(al);
+                    }
                 }
             }
         }

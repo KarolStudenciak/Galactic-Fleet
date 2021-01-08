@@ -12,7 +12,7 @@ namespace GwiezdnaFlota.Game
     class GameStatus 
     {
         public int points;
-        public int level;
+        public int level = 1;
         public bool game = true;
       
         public GameStatus()

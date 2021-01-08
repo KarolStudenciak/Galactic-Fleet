@@ -8,11 +8,12 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
-    class Ally : PictureBox
+    public class Ally : PictureBox
     {
         public int x, y;
         public int currX, currY;
         public bool isHit = false;
+        public bool reachedBase = false;
 
         public Ally(int x, int y)
         {
@@ -22,29 +23,22 @@ namespace GwiezdnaFlota.Models
             this.Location = new Point(x, y);
             this.Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.jpg");
             this.Size = new Size(32, 32);
+            this.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        public bool ReachedBase()
+        public void ReachedBase()
         {
-            var position = GetPosition();
+            var position = this.Location;
 
             if (position.X < 30)
-                return true;
+                reachedBase = true;
             else
-                return false;
-        }
-
-        public Point GetPosition()
-        {
-            Point result = new Point(this.currX, this.currY);
-            return result;
+                reachedBase = false;
         }
 
         public void MoveX()
         {
-           
-                this.Location = new Point(x + 100, y);
-           
+            this.Location = new Point(x + 100, y);           
         }
     }
 }
