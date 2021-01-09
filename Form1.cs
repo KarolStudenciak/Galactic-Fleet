@@ -26,6 +26,7 @@ namespace GwiezdnaFlota
 
         readonly Player player = new Player(30, 453);
         public readonly GameStatus GameStatus = new GameStatus();
+
         public GameWindow()
         {
             InitializeComponent();
@@ -96,20 +97,20 @@ namespace GwiezdnaFlota
 
             Laser.Shoot();
 
-            foreach (Ally al in Allies)
-            {
-                if (e.X >= al.Left && e.X <= al.Right)
-                {
-                    GameStatus.points -= 10;
-                    GameStatus.SaveScore();
-                    GamePanel.Controls.Remove(al);
-                   // al.Dispose();
-                    //   Laser.Shoot();
-                  //  Refresh();
-                }
+            //foreach (Ally al in Allies)
+            //{
+            //    if (e.X >= al.Left && e.X <= al.Right)
+            //    {
+            //        GameStatus.points -= 10;
+            //        GameStatus.SaveScore();
+            //        GamePanel.Controls.Remove(al);
+            //        // al.Dispose();
+            //        //   Laser.Shoot();
+            //        //  Refresh();
+            //    }
 
-            }
-            Console.WriteLine(Allies.Count);
+            //}
+            // Console.WriteLine(Allies.Count);
             Refresh();
         }
 

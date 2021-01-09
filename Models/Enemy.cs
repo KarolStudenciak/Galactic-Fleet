@@ -18,9 +18,9 @@ namespace GwiezdnaFlota.Models
 
         public Enemy(int x, int y)
         {
-            this.Location = new Point(x, y);
-            this.Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemy.jpg");
-            this.Size = new Size(32, 32);
+            Location = new Point(x, y);
+            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemy.jpg");
+            Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
