@@ -36,12 +36,9 @@
             this.NextLevelButton = new System.Windows.Forms.Button();
             this.RestartLevelButton = new System.Windows.Forms.Button();
             this.GamePanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuPanel.SuspendLayout();
             this.ScorePanel.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
-            this.GamePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuPanel
@@ -112,25 +109,12 @@
             this.GamePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GamePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GamePanel.BackgroundImage")));
             this.GamePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.GamePanel.Controls.Add(this.pictureBox1);
             this.GamePanel.Location = new System.Drawing.Point(0, 0);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(1002, 589);
             this.GamePanel.TabIndex = 2;
             this.GamePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseClick);
             this.GamePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseMove);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 453);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 129);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // GameWindow
             // 
@@ -147,8 +131,6 @@
             this.ScorePanel.ResumeLayout(false);
             this.ScorePanel.PerformLayout();
             this.ButtonPanel.ResumeLayout(false);
-            this.GamePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,7 +144,6 @@
         private System.Windows.Forms.FlowLayoutPanel ButtonPanel;
         private System.Windows.Forms.Button NextLevelButton;
         private System.Windows.Forms.Button RestartLevelButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

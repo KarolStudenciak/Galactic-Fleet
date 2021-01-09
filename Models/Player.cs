@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GwiezdnaFlota.Properties;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace GwiezdnaFlota.Models
     {
         public int x;
         public int y;
-       // public Image img;
+        // public Image img;
+   
         public Player(int x, int y) //30,453
         {
             this.x = x;

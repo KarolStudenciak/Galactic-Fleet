@@ -9,11 +9,10 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Game
 {
-    class GameStatus 
+    public class GameStatus 
     {
         public int points;
         public int level = 1;
-        public bool game = true;
       
         public GameStatus()
         {

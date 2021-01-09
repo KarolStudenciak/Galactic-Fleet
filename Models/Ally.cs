@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GwiezdnaFlota.Game;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,21 +15,28 @@ namespace GwiezdnaFlota.Models
         public int currX, currY;
         public bool isHit = false;
         public bool reachedBase = false;
+    
+        readonly Timer MovTim = new Timer();
 
         public Ally(int x, int y)
         {
             this.x = x;
             this.y = y;
-            this.Name = "pb";
-            this.Location = new Point(x, y);
-            this.Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.jpg");
-            this.Size = new Size(32, 32);
-            this.SizeMode = PictureBoxSizeMode.StretchImage;
+            Name = "pb";
+            Location = new Point(x, y);
+            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.jpg");
+            Size = new Size(32, 32);
+            SizeMode = PictureBoxSizeMode.StretchImage;
+            BackColor = Color.Transparent;
+
+            MovTim.Tick += new EventHandler(TimTickMoveX);
+            MovTim.Interval = 100;
+            MovTim.Start();
         }
 
         public void ReachedBase()
         {
-            var position = this.Location;
+            var position = Location;
 
             if (position.X < 30)
                 reachedBase = true;
@@ -36,9 +44,18 @@ namespace GwiezdnaFlota.Models
                 reachedBase = false;
         }
 
-        public void MoveX()
+        public void TimTickMoveX(object sender, EventArgs e)
         {
-            this.Location = new Point(x + 100, y);           
+            x -= 10;
+            Location = new Point(x, y);
+            
+            //ReachedBase();
+           
+            //if (reachedBase)
+            //{
+            //    gm.points -= 100;
+            //    gm.SaveScore();
+            //}
         }
     }
 }

@@ -9,13 +9,14 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
-    class Laser 
+    public class Laser 
     {
         public int x, y;
         public int currX, currY;
         public int dx = 10, dy = 10;
         Graphics line;
         Pen pen;
+
         public Laser(int x, int y, Pen pen, Graphics line)
         {
             this.x = x;
