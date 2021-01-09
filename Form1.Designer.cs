@@ -109,6 +109,7 @@
             // GamePanel
             // 
             this.GamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.GamePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GamePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GamePanel.BackgroundImage")));
             this.GamePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.GamePanel.Controls.Add(this.pictureBox1);
