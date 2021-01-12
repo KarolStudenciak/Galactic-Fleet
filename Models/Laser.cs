@@ -17,12 +17,12 @@ namespace GwiezdnaFlota.Models
         Graphics line;
         Pen pen;
 
-        public Laser(int x, int y, Pen pen, Graphics line)
+        public Laser()//int x, int y, Pen pen, Graphics line)
         {
-            this.x = x;
-            this.y = y;
-            this.pen = pen;
-            this.line = line;
+            //this.x = x;
+            //this.y = y;
+            //this.pen = pen;
+            //this.line = line;
         }
 
         public void PlaySound()
@@ -36,7 +36,7 @@ namespace GwiezdnaFlota.Models
             return result;
         }
 
-        public void Shoot()
+        public void Shoot(int x, int y, Pen pen, Graphics line)
         {
             line.DrawLine(pen, currX, currY, x, y);
         }

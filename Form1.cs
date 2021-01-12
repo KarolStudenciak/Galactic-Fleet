@@ -14,18 +14,19 @@ namespace GwiezdnaFlota
 {
     public partial class GameWindow : Form
     {       
-        bool deployed = false;
         bool shooting = false;
         private readonly Graphics Graphics;
         private readonly Pen Pen;
         readonly Random r = new Random();
-        readonly Timer GenTim = new Timer();
+        readonly Timer GenAllies = new Timer();
+        readonly Timer GenEnemies = new Timer();
 
         public List<Ally> Allies = new List<Ally>();
         public List<Enemy> Enemies = new List<Enemy>();
 
         readonly Player player = new Player(30, 453);
-        public readonly GameStatus GameStatus = new GameStatus();
+        readonly GameStatus GameStatus = new GameStatus();
+        readonly Laser Laser = new Laser();
 
         public GameWindow()
         {
@@ -34,18 +35,42 @@ namespace GwiezdnaFlota
             Pen = new Pen(Color.Red, 3);
             GamePanel.Controls.Add(player);
 
-            GenTim.Tick += new EventHandler(TimTickGenerateObjects);
-            GenTim.Interval = 2000;
-            GenTim.Start();
+            GenAllies.Tick += new EventHandler(TimTickGenerateAllies);
+            GenAllies.Interval = 2000;
+            GenAllies.Start();
+
+            GenEnemies.Tick += new EventHandler(TimTickGenerateEnemies);
+            GenEnemies.Interval = 1500;
+            GenEnemies.Start();
+
+            Laser.currX = player.Bounds.Right;
+            Laser.currY = player.Bounds.Top;
         }
 
-        private void TimTickGenerateObjects(object sender, EventArgs e)
+        private void TimTickGenerateEnemies(object sender, EventArgs e)
+        {
+            var enemy = new Enemy(r.Next(300, 600), r.Next(300, 600));
+
+            Enemies.Add(enemy);
+
+            GamePanel.Controls.Add(enemy);
+
+            enemy.MouseClick += new MouseEventHandler(NpcClicked);
+
+            if (Enemies.Count == 5) GenEnemies.Stop();
+        }
+
+        private void TimTickGenerateAllies(object sender, EventArgs e)
         {
             var ally = new Ally(r.Next(300,600), r.Next(300, 600));
+
             Allies.Add(ally);
+
             GamePanel.Controls.Add(ally);
 
-            if (Allies.Count == 10) GenTim.Stop();
+            ally.MouseClick += new MouseEventHandler(NpcClicked);
+
+            if (Allies.Count == 3) GenAllies.Stop();
         }
 
         //menu controls//
@@ -57,23 +82,25 @@ namespace GwiezdnaFlota
             Allies.Clear();
             Enemies.Clear();
 
-            GenTim.Start();
+            GenAllies.Start();
 
             GamePanel.Controls.Add(player);
         }
 
-        //private void pb_Click(object sender, EventArgs e)
-        //{
-        //    PictureBox clickedPictureBox = sender as PictureBox;
-        //    GamePanel.Controls.Remove(clickedPictureBox);
-        //    clickedPictureBox.Dispose();
+        private void NpcClicked(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
 
-        //    if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 100;
-        //    if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
-        //    GameStatus.SaveScore();
+            if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 10;
+            if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
 
-        //    Refresh();
-        //}
+            Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
+
+            GamePanel.Controls.Remove(clickedPictureBox);
+            GameStatus.SaveScore();
+          
+            Refresh();
+        }
 
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
@@ -90,27 +117,8 @@ namespace GwiezdnaFlota
         {
             if (shooting != true) return;
 
-            var Laser = new Laser(e.X, e.Y, Pen, Graphics);
+            Laser.Shoot(e.X, e.Y, Pen, Graphics);
 
-            Laser.currX = player.Bounds.Right;
-            Laser.currY = player.Bounds.Top;
-
-            Laser.Shoot();
-
-            //foreach (Ally al in Allies)
-            //{
-            //    if (e.X >= al.Left && e.X <= al.Right)
-            //    {
-            //        GameStatus.points -= 10;
-            //        GameStatus.SaveScore();
-            //        GamePanel.Controls.Remove(al);
-            //        // al.Dispose();
-            //        //   Laser.Shoot();
-            //        //  Refresh();
-            //    }
-
-            //}
-            // Console.WriteLine(Allies.Count);
             Refresh();
         }
 

@@ -22,6 +22,7 @@ namespace GwiezdnaFlota.Game
         public void ResetPoints()
         {
             points = 0;
+            SaveScore();
         }
 
         public void NextLevel()

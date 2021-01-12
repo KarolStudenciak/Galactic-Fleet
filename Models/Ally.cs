@@ -29,8 +29,6 @@ namespace GwiezdnaFlota.Models
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
 
-            MouseClick += new MouseEventHandler(AllyClicked);
-
             MovTim.Tick += new EventHandler(TimTickMoveX);
             MovTim.Interval = 100;
             MovTim.Start();
@@ -44,11 +42,6 @@ namespace GwiezdnaFlota.Models
                 reachedBase = true;
             else
                 reachedBase = false;
-        }
-
-        public void AllyClicked(object sender, EventArgs e)
-        {
-            Dispose();
         }
 
         public void TimTickMoveX(object sender, EventArgs e)
