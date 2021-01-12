@@ -13,6 +13,7 @@ namespace GwiezdnaFlota.Game
     {
         public int points;
         public int level = 1;
+        public DateTime sesion = DateTime.Now;
       
         public GameStatus()
         {
@@ -22,7 +23,6 @@ namespace GwiezdnaFlota.Game
         public void ResetPoints()
         {
             points = 0;
-            SaveScore();
         }
 
         public void NextLevel()
@@ -32,13 +32,11 @@ namespace GwiezdnaFlota.Game
 
         public void SaveScore()
         {            
-            StreamWriter str = new StreamWriter(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Wyniki.txt");
-            int sesja = 0;
+            StreamWriter str = new StreamWriter(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Wyniki.txt", true);
 
             using (str)
             {
-                sesja = sesja + 1;
-                str.WriteLine($"Sesja {sesja}: " + "Wynik: " + points + "\n\r");
+                str.WriteLine($"\nSesja : {sesion} \n" + "Wynik: " + points + "\n" + $"Level: {level}");
             }
         }
     }

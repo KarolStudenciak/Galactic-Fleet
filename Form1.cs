@@ -102,11 +102,10 @@ namespace GwiezdnaFlota
 
             Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
 
-            //GamePanel.Controls.Remove(clickedPictureBox);
+            GamePanel.Controls.Remove(clickedPictureBox);
             clickedPictureBox.Dispose();
 
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
-          //  GameStatus.SaveScore();
           
             Refresh();
         }

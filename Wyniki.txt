@@ -1,2 +1,12 @@
-Sesja 1: Wynik: -10
-
+
+Sesja : 12.01.2021 16:24:18 
+Wynik: 0
+Level: 2
+
+Sesja : 12.01.2021 16:24:18 
+Wynik: 70
+Level: 2
+
+Sesja : 12.01.2021 16:27:10 
+Wynik: 10
+Level: 2
