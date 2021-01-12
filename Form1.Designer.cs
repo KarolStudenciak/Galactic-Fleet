@@ -71,7 +71,7 @@
             this.ScoreTextBox.ReadOnly = true;
             this.ScoreTextBox.Size = new System.Drawing.Size(374, 80);
             this.ScoreTextBox.TabIndex = 0;
-            this.ScoreTextBox.Text = "Score:";
+            this.ScoreTextBox.Text = "\r\n";
             this.ScoreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ButtonPanel

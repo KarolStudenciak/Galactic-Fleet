@@ -97,6 +97,8 @@ namespace GwiezdnaFlota
             Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
 
             GamePanel.Controls.Remove(clickedPictureBox);
+
+            ScoreTextBox.Text = $"Score: {GameStatus.points}";
             GameStatus.SaveScore();
           
             Refresh();
@@ -105,10 +107,11 @@ namespace GwiezdnaFlota
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.NextLevel();
-
             GameStatus.ResetPoints();
+
             GamePanel.Controls.Clear();
             Allies.Clear();
+            Enemies.Clear();
         }
         //menu controls//
 
