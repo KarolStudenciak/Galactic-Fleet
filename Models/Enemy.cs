@@ -16,7 +16,7 @@ namespace GwiezdnaFlota.Models
         public bool isHit = false;
         public bool reachedBase = false;
 
-        readonly Timer MovTim = new Timer();
+        readonly Timer MovEnemyTim = new Timer();
 
         public Enemy(int x, int y)
         {
@@ -26,10 +26,11 @@ namespace GwiezdnaFlota.Models
             Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemy.jpg");
             Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
+            BackColor = Color.Transparent;
 
-            MovTim.Tick += new EventHandler(TimTickMoveX);
-            MovTim.Interval = 100;
-            MovTim.Start();
+            MovEnemyTim.Tick += new EventHandler(TimTickMoveX);
+            MovEnemyTim.Interval = 100;
+            MovEnemyTim.Start();
         }
 
         public void ReachedBase()

@@ -16,7 +16,7 @@ namespace GwiezdnaFlota.Models
         public bool isHit = false;
         public bool reachedBase = false;
     
-        readonly Timer MovTim = new Timer();
+        readonly Timer MovAllyTim = new Timer();
 
         public Ally(int x, int y)
         {
@@ -29,9 +29,9 @@ namespace GwiezdnaFlota.Models
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
 
-            MovTim.Tick += new EventHandler(TimTickMoveX);
-            MovTim.Interval = 100;
-            MovTim.Start();
+            MovAllyTim.Tick += new EventHandler(TimTickMoveX);
+            MovAllyTim.Interval = 100;
+            MovAllyTim.Start();
         }
 
         public void ReachedBase()

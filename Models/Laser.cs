@@ -13,27 +13,15 @@ namespace GwiezdnaFlota.Models
     {
         public int x, y;
         public int currX, currY;
-        public int dx = 10, dy = 10;
-        Graphics line;
-        Pen pen;
 
-        public Laser()//int x, int y, Pen pen, Graphics line)
+        public Laser()
         {
-            //this.x = x;
-            //this.y = y;
-            //this.pen = pen;
-            //this.line = line;
+
         }
 
         public void PlaySound()
         {
 
-        }
-
-        public Point GetPosition()
-        {
-            Point result = new Point(this.currX, this.currY);
-            return result;
         }
 
         public void Shoot(int x, int y, Pen pen, Graphics line)

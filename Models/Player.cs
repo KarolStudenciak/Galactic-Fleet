@@ -13,8 +13,7 @@ namespace GwiezdnaFlota.Models
     {
         public int x;
         public int y;
-        // public Image img;
-   
+
         public Player(int x, int y) //30,453
         {
             this.x = x;

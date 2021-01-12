@@ -45,6 +45,8 @@ namespace GwiezdnaFlota
 
             Laser.currX = player.Bounds.Right;
             Laser.currY = player.Bounds.Top;
+
+            ScoreTextBox.Text = $"Score: {GameStatus.points}";
         }
 
         private void TimTickGenerateEnemies(object sender, EventArgs e)
@@ -57,7 +59,16 @@ namespace GwiezdnaFlota
 
             enemy.MouseClick += new MouseEventHandler(NpcClicked);
 
-            if (Enemies.Count == 5) GenEnemies.Stop();
+            switch (GameStatus.level)
+            {
+                case 1:
+                    if (Enemies.Count == 5) GenEnemies.Stop();
+                    break;
+
+                case 2:
+                    if (Enemies.Count == 8) GenEnemies.Stop();
+                    break;
+            }
         }
 
         private void TimTickGenerateAllies(object sender, EventArgs e)
@@ -70,10 +81,36 @@ namespace GwiezdnaFlota
 
             ally.MouseClick += new MouseEventHandler(NpcClicked);
 
-            if (Allies.Count == 3) GenAllies.Stop();
+            switch (GameStatus.level)
+            {
+                case 1: if (Allies.Count == 3) GenAllies.Stop();
+                break;
+
+                case 2: if (Allies.Count == 5) GenAllies.Stop();
+                break;
+            }           
         }
 
-        //menu controls//
+        private void NpcClicked(object sender, EventArgs e)
+        {
+            if (shooting != true) return;
+
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 10;
+            if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
+
+            Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
+
+            GamePanel.Controls.Remove(clickedPictureBox);
+            clickedPictureBox.Dispose();
+
+            ScoreTextBox.Text = $"Score: {GameStatus.points}";
+          //  GameStatus.SaveScore();
+          
+            Refresh();
+        }
+
         private void RestartLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.ResetPoints();
@@ -83,39 +120,18 @@ namespace GwiezdnaFlota
             Enemies.Clear();
 
             GenAllies.Start();
+            GenEnemies.Start();
 
             GamePanel.Controls.Add(player);
-        }
-
-        private void NpcClicked(object sender, EventArgs e)
-        {
-            PictureBox clickedPictureBox = sender as PictureBox;
-
-            if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 10;
-            if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
-
-            Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
-
-            GamePanel.Controls.Remove(clickedPictureBox);
-
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
-            GameStatus.SaveScore();
-          
-            Refresh();
         }
 
         private void NextLevelButton_Click(object sender, EventArgs e)
         {
             GameStatus.NextLevel();
-            GameStatus.ResetPoints();
-
-            GamePanel.Controls.Clear();
-            Allies.Clear();
-            Enemies.Clear();
+            RestartLevelButton_Click(sender, e);
         }
-        //menu controls//
 
-        // mouse movement and shooting//
         private void GamePanel_MouseClick(object sender, MouseEventArgs e)
         {
             if (shooting != true) return;
@@ -131,7 +147,6 @@ namespace GwiezdnaFlota
                 shooting = true;
             else
                 shooting = false;
-        }
-        //mouse movement and shooting//  
+        } 
     }
 }
