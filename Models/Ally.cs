@@ -48,14 +48,6 @@ namespace GwiezdnaFlota.Models
         {
             x -= 10;
             Left = x;
-
-            //ReachedBase();
-
-            //if (reachedBase)
-            //{
-            //    Controls.Remove(this);
-            //    Dispose();
-            //}
         }
     }
 }
