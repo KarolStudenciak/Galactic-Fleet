@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
-    public class Laser 
+    public class Laser
     {
         public int x, y;
         public int currX, currY;

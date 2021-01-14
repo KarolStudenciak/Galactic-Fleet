@@ -24,7 +24,7 @@ namespace GwiezdnaFlota.Models
             this.y = y;
             Name = "pb";
             Location = new Point(x, y);
-            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.jpg");
+            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.png");
             Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
@@ -38,7 +38,7 @@ namespace GwiezdnaFlota.Models
         {
             var position = Location;
 
-            if (position.X < 30)
+            if (position.X <= 0)
                 reachedBase = true;
             else
                 reachedBase = false;
@@ -48,13 +48,13 @@ namespace GwiezdnaFlota.Models
         {
             x -= 10;
             Left = x;
-            
+
             //ReachedBase();
-           
+
             //if (reachedBase)
             //{
-            //    gm.points -= 100;
-            //    gm.SaveScore();
+            //    Controls.Remove(this);
+            //    Dispose();
             //}
         }
     }

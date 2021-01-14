@@ -44,7 +44,8 @@
             // MenuPanel
             // 
             this.MenuPanel.AllowDrop = true;
-            this.MenuPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.MenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.MenuPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MenuPanel.Controls.Add(this.ScorePanel);
@@ -59,17 +60,19 @@
             this.ScorePanel.Controls.Add(this.ScoreTextBox);
             this.ScorePanel.Location = new System.Drawing.Point(3, 3);
             this.ScorePanel.Name = "ScorePanel";
-            this.ScorePanel.Size = new System.Drawing.Size(516, 94);
+            this.ScorePanel.Size = new System.Drawing.Size(516, 110);
             this.ScorePanel.TabIndex = 0;
             // 
             // ScoreTextBox
             // 
+            this.ScoreTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ScoreTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ScoreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ScoreTextBox.Location = new System.Drawing.Point(3, 3);
             this.ScoreTextBox.Multiline = true;
             this.ScoreTextBox.Name = "ScoreTextBox";
             this.ScoreTextBox.ReadOnly = true;
-            this.ScoreTextBox.Size = new System.Drawing.Size(374, 80);
+            this.ScoreTextBox.Size = new System.Drawing.Size(513, 107);
             this.ScoreTextBox.TabIndex = 0;
             this.ScoreTextBox.Text = "\r\n";
             this.ScoreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -80,14 +83,14 @@
             this.ButtonPanel.Controls.Add(this.RestartLevelButton);
             this.ButtonPanel.Location = new System.Drawing.Point(525, 3);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(466, 100);
+            this.ButtonPanel.Size = new System.Drawing.Size(466, 110);
             this.ButtonPanel.TabIndex = 1;
             // 
             // NextLevelButton
             // 
             this.NextLevelButton.Location = new System.Drawing.Point(3, 3);
             this.NextLevelButton.Name = "NextLevelButton";
-            this.NextLevelButton.Size = new System.Drawing.Size(200, 80);
+            this.NextLevelButton.Size = new System.Drawing.Size(229, 107);
             this.NextLevelButton.TabIndex = 0;
             this.NextLevelButton.Text = "Next Level";
             this.NextLevelButton.UseVisualStyleBackColor = true;
@@ -95,9 +98,10 @@
             // 
             // RestartLevelButton
             // 
-            this.RestartLevelButton.Location = new System.Drawing.Point(209, 3);
+            this.RestartLevelButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RestartLevelButton.Location = new System.Drawing.Point(238, 3);
             this.RestartLevelButton.Name = "RestartLevelButton";
-            this.RestartLevelButton.Size = new System.Drawing.Size(200, 80);
+            this.RestartLevelButton.Size = new System.Drawing.Size(225, 107);
             this.RestartLevelButton.TabIndex = 1;
             this.RestartLevelButton.Text = "Restart Level";
             this.RestartLevelButton.UseVisualStyleBackColor = true;
@@ -105,7 +109,9 @@
             // 
             // GamePanel
             // 
-            this.GamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.GamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GamePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GamePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GamePanel.BackgroundImage")));
             this.GamePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
