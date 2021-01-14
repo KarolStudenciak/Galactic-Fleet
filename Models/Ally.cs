@@ -24,12 +24,12 @@ namespace GwiezdnaFlota.Models
             this.y = y;
             Name = "pb";
             Location = new Point(x, y);
-            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\ally.png");
+            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\allytrans.png");
             Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
 
-            MovAllyTim.Tick += new EventHandler(TimTickMoveX);
+            MovAllyTim.Tick += new EventHandler(MoveX);
             MovAllyTim.Interval = 100;
             MovAllyTim.Start();
         }
@@ -44,7 +44,7 @@ namespace GwiezdnaFlota.Models
                 reachedBase = false;
         }
 
-        public void TimTickMoveX(object sender, EventArgs e)
+        public void MoveX(object sender, EventArgs e)
         {
             x -= 10;
             Left = x;

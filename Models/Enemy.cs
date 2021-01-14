@@ -24,12 +24,12 @@ namespace GwiezdnaFlota.Models
             this.x = x;
             this.y = y;
             Location = new Point(x, y);
-            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemy.png");
+            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemytrans.png");
             Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
 
-            MovEnemyTim.Tick += new EventHandler(TimTickMoveX);
+            MovEnemyTim.Tick += new EventHandler(MoveX);
             MovEnemyTim.Interval = 100;
             MovEnemyTim.Start();
         }
@@ -44,7 +44,7 @@ namespace GwiezdnaFlota.Models
                 reachedBase = false;
         }
 
-        public void TimTickMoveX(object sender, EventArgs e)
+        public void MoveX(object sender, EventArgs e)
         {
             x -= 10;
             Left = x;
