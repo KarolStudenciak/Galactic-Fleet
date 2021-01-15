@@ -14,13 +14,13 @@ namespace GwiezdnaFlota.Models
         public int x;
         public int y;
 
-        public Player(int x, int y) //30,453
+        public Player(int x, int y) 
         {
             this.x = x;
             this.y = y;
             Name = "player";
             Location = new Point(x, y);
-            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\playertrans.png");
+            Image = Resources.playertrans;
             Size = new Size(64, 64);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;

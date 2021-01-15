@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
     <Reference Include="ReaLTaiizor, Version=3.7.8.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ReaLTaiizor.3.7.8.1\lib\net472\ReaLTaiizor.dll</HintPath>
     </Reference>
@@ -57,10 +58,16 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game\GameStatus.cs" />
-    <Compile Include="Models\Ally.cs" />
-    <Compile Include="Models\Enemy.cs" />
+    <Compile Include="Models\Ally.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Enemy.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\Laser.cs" />
-    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -90,6 +98,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Img\allytrans.png" />
+    <None Include="Img\enemytrans.png" />
+    <None Include="Img\playertrans.png" />
+    <None Include="Resources\lasersound.wav" />
+    <None Include="Resources\explosionsound.wav" />
+    <None Include="Img\explosion.png" />
     <Content Include="Resources\playertrans.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

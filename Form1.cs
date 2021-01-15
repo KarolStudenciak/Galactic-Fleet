@@ -22,7 +22,6 @@ namespace GwiezdnaFlota
 
         readonly Timer GenAllies = new Timer();
         readonly Timer GenEnemies = new Timer();
-  //      readonly Timer MoveTim = new Timer();
 
         public List<Ally> Allies = new List<Ally>();
         public List<Enemy> Enemies = new List<Enemy>();
@@ -34,15 +33,14 @@ namespace GwiezdnaFlota
         public GameWindow()
         {
             InitializeComponent();
+            CenterToScreen();
+        
             Graphics = GamePanel.CreateGraphics();
+
             Pen = new Pen(Color.Red, 4);
-            player = new Player(GamePanel.Left, GamePanel.Bottom);
-
+            player = new Player(GamePanel.Left, GamePanel.Bottom-64);
+            
             GamePanel.Controls.Add(player);
-
-            //MoveTim.Tick += new EventHandler(MoveNPC);
-            //MoveTim.Interval = 100;
-            //MoveTim.Start();
 
             GenAllies.Tick += new EventHandler(TimTickGenerateAllies);
             GenAllies.Interval = 3000;
@@ -58,39 +56,33 @@ namespace GwiezdnaFlota
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
         }
 
-        //private void MoveNPC(object sender, EventArgs e)
-        //{
-        //    foreach(Ally al in Allies)
-        //    {
-        //        al.MoveX();               
-        //    }
-
-        //    foreach(Enemy en in Enemies)
-        //    {
-        //        en.MoveX();               
-        //    }
-            
-        //}
-
         private void TimTickGenerateEnemies(object sender, EventArgs e)
         {
             var enemy = new Enemy(GamePanel.Right, r.Next(GamePanel.Top, player.Bounds.Top-32));
 
             enemy.MouseClick += new MouseEventHandler(NpcClicked);
             enemy.LocationChanged += new EventHandler(CheckLocation);
-
+            
             Enemies.Add(enemy);
 
             GamePanel.Controls.Add(enemy);
-
+            
             switch (GameStatus.level)
             {
                 case 1:
-                    if (Enemies.Count == 5) GenEnemies.Stop();
+                    if (Enemies.Count == 5)
+                    {
+                        GenEnemies.Stop();
+                        GenEnemies.Dispose();
+                    }
                     break;
 
                 case 2:
-                    if (Enemies.Count == 8) GenEnemies.Stop();
+                    if (Enemies.Count == 8)
+                    {
+                        GenEnemies.Stop();
+                        GenEnemies.Dispose();
+                    }
                     break;
             }
         }
@@ -105,13 +97,21 @@ namespace GwiezdnaFlota
             Allies.Add(ally);
 
             GamePanel.Controls.Add(ally);
-
+          
             switch (GameStatus.level)
             {
-                case 1: if (Allies.Count == 3) GenAllies.Stop();
+                case 1: if (Allies.Count == 3)
+                    {
+                        GenAllies.Stop();
+                        GenAllies.Dispose();
+                    }
                 break;
 
-                case 2: if (Allies.Count == 5) GenAllies.Stop();
+                case 2: if (Allies.Count == 5)
+                    {
+                        GenAllies.Stop();
+                        GenAllies.Dispose();
+                    }
                 break;
             }           
         }
@@ -120,14 +120,17 @@ namespace GwiezdnaFlota
         {
             PictureBox npc = sender as PictureBox;
 
-            if (npc.Left == 2)
+            if (npc.Bounds.IntersectsWith(GamePanel.Bounds) && npc.Left <= 0) 
             {
+                GamePanel.Controls.Remove(npc);
+                Refresh();
+                Console.WriteLine(GamePanel.Controls.Count);
+                npc.Location = new Point(5000, npc.Location.Y);
+
                 if (npc.GetType() == typeof(Enemy)) GameStatus.points -= 10;
                 if (npc.GetType() == typeof(Ally)) GameStatus.points += 10;
 
-                npc.Location = new Point(5000, npc.Location.Y);
-                GamePanel.Controls.Remove(npc);
-                npc.Dispose();
+
                  
                 ScoreTextBox.Text = $"Score: {GameStatus.points}";
 
@@ -149,11 +152,10 @@ namespace GwiezdnaFlota
             if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
 
             Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
-        
-            GamePanel.Controls.Remove(clickedPictureBox);
-            clickedPictureBox.Dispose();
             
-
+            GamePanel.Controls.Remove(clickedPictureBox);
+            Console.WriteLine(GamePanel.Controls.Count);
+            
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
           
             Refresh();
@@ -199,7 +201,8 @@ namespace GwiezdnaFlota
             if (shooting != true) return;
             
             Laser.Shoot(e.X, e.Y, Pen, Graphics);
-
+            Laser.PlayLaserSound();
+        
             Refresh();
         }
 

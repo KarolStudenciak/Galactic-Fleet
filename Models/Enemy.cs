@@ -1,21 +1,21 @@
 ﻿using GwiezdnaFlota.Game;
 using System;
 using System.Collections.Generic;
+using GwiezdnaFlota.Properties;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Media;
 
 namespace GwiezdnaFlota.Models
 {
     public class Enemy : PictureBox
     {
         public int x, y;
-        public int currX, currY;
-        public bool isHit = false;
-        public bool reachedBase = false;
 
         readonly Timer MovEnemyTim = new Timer();
 
@@ -23,31 +23,34 @@ namespace GwiezdnaFlota.Models
         {
             this.x = x;
             this.y = y;
+            Name = "enemy";
             Location = new Point(x, y);
-            Image = Image.FromFile(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Img\enemytrans.png");
+            Image = Resources.enemytrans;
             Size = new Size(32, 32);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
+            MouseClick += new MouseEventHandler(Explode);
 
             MovEnemyTim.Tick += new EventHandler(MoveX);
-            MovEnemyTim.Interval = 100;
+            MovEnemyTim.Interval = 1300;
             MovEnemyTim.Start();
-        }
-
-        public void ReachedBase()
-        {
-            var position = Location;
-
-            if (position.X <= 0)
-                reachedBase = true;
-            else
-                reachedBase = false;
         }
 
         public void MoveX(object sender, EventArgs e)
         {
-            x -= 10;
+            x -= 70;
             Left = x;
+            Invalidate();
+        }
+
+        public void Explode(object sender, MouseEventArgs e)
+        {
+            Stream str = Resources.explosionsound;
+            using (str)
+            {
+                SoundPlayer explosionSound = new SoundPlayer(str);
+                explosionSound.Play();
+            }
         }
     }
 }
