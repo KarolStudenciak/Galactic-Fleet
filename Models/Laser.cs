@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za wystrzał lasera i jego dźwięk
+    /// </summary>
     public class Laser
     {
         public int x, y;
@@ -21,7 +24,9 @@ namespace GwiezdnaFlota.Models
         {
 
         }
-
+        /// <summary>
+        /// Metoda pobiera plik .wav z zasobów do odtworzenia dźwięku
+        /// </summary>
         public void PlayLaserSound()
         {
             Stream str = Resources.lasersound;
@@ -31,7 +36,9 @@ namespace GwiezdnaFlota.Models
                 laserSound.Play();
             }
         }
-
+        /// <summary>
+        /// Metoda rysująca strzał pobierająca obiekty klas Pen i Graphics
+        /// </summary>
         public void Shoot(int x, int y, Pen pen, Graphics line)
         {
             line.DrawLine(pen, currX, currY, x, y);

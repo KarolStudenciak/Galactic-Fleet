@@ -19,17 +19,29 @@ namespace GwiezdnaFlota
         private readonly Graphics Graphics;
         private readonly Pen Pen;
         readonly Random r = new Random();
-
+        /// <summary>
+        /// Timer w takt którego generowani są sojusznicy
+        /// </summary>
         readonly Timer GenAllies = new Timer();
+        /// <summary>
+        /// Timer w takt którego generowani są wrogowie
+        /// </summary>
         readonly Timer GenEnemies = new Timer();
-
+        /// <summary>
+        /// Lista przechowująca sojuszników - tyle ile jest/było aktualnie w użyciu
+        /// </summary>
         public List<Ally> Allies = new List<Ally>();
+        /// <summary>
+        /// Lista przechowująca wrogów - tyle ile jest/było aktualnie w użyciu
+        /// </summary>
         public List<Enemy> Enemies = new List<Enemy>();
 
         readonly Player player; 
         readonly GameStatus GameStatus = new GameStatus();
         readonly Laser Laser = new Laser();
-
+        /// <summary>
+        /// Konstruktor konfigurujący timery, formularz, gracza, przygotowania do rozpoczęcia gry
+        /// </summary>
         public GameWindow()
         {
             InitializeComponent();
@@ -55,8 +67,10 @@ namespace GwiezdnaFlota
 
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
         }
-
-        private void TimTickGenerateEnemies(object sender, EventArgs e)
+        /// <summary>
+        /// Metoda generująca wrogów w takt timera w ilości zależnej od poziomu
+        /// </summary>
+        public void TimTickGenerateEnemies(object sender, EventArgs e)
         {
             var enemy = new Enemy(GamePanel.Right, r.Next(GamePanel.Top, player.Bounds.Top-32));
 
@@ -86,8 +100,10 @@ namespace GwiezdnaFlota
                     break;
             }
         }
-
-        private void TimTickGenerateAllies(object sender, EventArgs e)
+        /// <summary>
+        /// Metoda generująca sojuszników w takt timera, w ilości zależnej od poziomu
+        /// </summary>
+        public void TimTickGenerateAllies(object sender, EventArgs e)
         {
             var ally = new Ally(GamePanel.Right, r.Next(GamePanel.Top, player.Bounds.Top-32));
 
@@ -115,8 +131,10 @@ namespace GwiezdnaFlota
                 break;
             }           
         }
-
-        private void CheckLocation(object sender, EventArgs e)
+        /// <summary>
+        /// Metoda reagująca na dotarcie obiektów do bazy - liczy punkty, zwiększa poziom jeśli obiekty się skończyły
+        /// </summary>
+        public void CheckLocation(object sender, EventArgs e)
         {
             PictureBox npc = sender as PictureBox;
 
@@ -141,8 +159,10 @@ namespace GwiezdnaFlota
                 }
             }         
         }
-
-        private void NpcClicked(object sender, EventArgs e)
+        /// <summary>
+        /// Metoda obsługująca kliknięty obiekt - naliczanie punktów, usuwanie zestrzelonego obiektu
+        /// </summary>
+        public void NpcClicked(object sender, EventArgs e)
         {
             if (shooting != true) return;
 
@@ -167,13 +187,17 @@ namespace GwiezdnaFlota
             }
 
         }
-
-        private void RestartLevelButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Metoda reset zostanie wywołana po naciśnięciu przycisku Restart Level
+        /// </summary>
+        public void RestartLevelButton_Click(object sender, EventArgs e)
         {
             Reset();
         }
-
-        private void Reset()
+        /// <summary>
+        /// Metoda resetująca kontrolki oraz poziom i gracza
+        /// </summary>
+        public void Reset()
         {
             GameStatus.ResetPoints();
 
@@ -187,16 +211,20 @@ namespace GwiezdnaFlota
             GamePanel.Controls.Add(player);
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
         }
-
-        private void NextLevelButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Kliknięcie Next Level, wywołuje tę metodę zwiększającą poziom
+        /// </summary>
+        public void NextLevelButton_Click(object sender, EventArgs e)
         {
             if (GameStatus.level == 2) return;
 
             GameStatus.NextLevel();
             Reset();
         }
-
-        private void GamePanel_MouseClick(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Metoda strzelająca w miejsce kliknięcia myszką
+        /// </summary>
+        public void GamePanel_MouseClick(object sender, MouseEventArgs e)
         {
             if (shooting != true) return;
             
@@ -205,16 +233,20 @@ namespace GwiezdnaFlota
         
             Refresh();
         }
-
-        private void GamePanel_MouseMove(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Metoda nie pozwalająca graczowi strzelać w obiekty, które dotarły do bazy. Gracz strzela tylko w stronę nadlatujących obiektów
+        /// </summary>
+        public void GamePanel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.X >= player.Bounds.Right)
                 shooting = true;
             else
                 shooting = false;
         }
-
-        private void GameWindow_FormClosed(object sender, FormClosedEventArgs e)
+        /// <summary>
+        /// Po zamknięciu aplikacji, wynik i dane rozgrywki zapisywane są w pliku tekstowym
+        /// </summary>
+        public void GameWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             GameStatus.SaveScore();
         }

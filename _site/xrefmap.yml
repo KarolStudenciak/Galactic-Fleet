@@ -1,0 +1,485 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: GwiezdnaFlota
+  name: GwiezdnaFlota
+  href: api/GwiezdnaFlota.html
+  commentId: N:GwiezdnaFlota
+  fullName: GwiezdnaFlota
+  nameWithType: GwiezdnaFlota
+- uid: GwiezdnaFlota.Game
+  name: GwiezdnaFlota.Game
+  href: api/GwiezdnaFlota.Game.html
+  commentId: N:GwiezdnaFlota.Game
+  fullName: GwiezdnaFlota.Game
+  nameWithType: GwiezdnaFlota.Game
+- uid: GwiezdnaFlota.Game.GameStatus
+  name: GameStatus
+  href: api/GwiezdnaFlota.Game.GameStatus.html
+  commentId: T:GwiezdnaFlota.Game.GameStatus
+  fullName: GwiezdnaFlota.Game.GameStatus
+  nameWithType: GameStatus
+- uid: GwiezdnaFlota.Game.GameStatus.#ctor
+  name: GameStatus()
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus__ctor
+  commentId: M:GwiezdnaFlota.Game.GameStatus.#ctor
+  fullName: GwiezdnaFlota.Game.GameStatus.GameStatus()
+  nameWithType: GameStatus.GameStatus()
+- uid: GwiezdnaFlota.Game.GameStatus.#ctor*
+  name: GameStatus
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus__ctor_
+  commentId: Overload:GwiezdnaFlota.Game.GameStatus.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Game.GameStatus.GameStatus
+  nameWithType: GameStatus.GameStatus
+- uid: GwiezdnaFlota.Game.GameStatus.level
+  name: level
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_level
+  commentId: F:GwiezdnaFlota.Game.GameStatus.level
+  fullName: GwiezdnaFlota.Game.GameStatus.level
+  nameWithType: GameStatus.level
+- uid: GwiezdnaFlota.Game.GameStatus.NextLevel
+  name: NextLevel()
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_NextLevel
+  commentId: M:GwiezdnaFlota.Game.GameStatus.NextLevel
+  fullName: GwiezdnaFlota.Game.GameStatus.NextLevel()
+  nameWithType: GameStatus.NextLevel()
+- uid: GwiezdnaFlota.Game.GameStatus.NextLevel*
+  name: NextLevel
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_NextLevel_
+  commentId: Overload:GwiezdnaFlota.Game.GameStatus.NextLevel
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Game.GameStatus.NextLevel
+  nameWithType: GameStatus.NextLevel
+- uid: GwiezdnaFlota.Game.GameStatus.points
+  name: points
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_points
+  commentId: F:GwiezdnaFlota.Game.GameStatus.points
+  fullName: GwiezdnaFlota.Game.GameStatus.points
+  nameWithType: GameStatus.points
+- uid: GwiezdnaFlota.Game.GameStatus.ResetPoints
+  name: ResetPoints()
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_ResetPoints
+  commentId: M:GwiezdnaFlota.Game.GameStatus.ResetPoints
+  fullName: GwiezdnaFlota.Game.GameStatus.ResetPoints()
+  nameWithType: GameStatus.ResetPoints()
+- uid: GwiezdnaFlota.Game.GameStatus.ResetPoints*
+  name: ResetPoints
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_ResetPoints_
+  commentId: Overload:GwiezdnaFlota.Game.GameStatus.ResetPoints
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Game.GameStatus.ResetPoints
+  nameWithType: GameStatus.ResetPoints
+- uid: GwiezdnaFlota.Game.GameStatus.SaveScore
+  name: SaveScore()
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_SaveScore
+  commentId: M:GwiezdnaFlota.Game.GameStatus.SaveScore
+  fullName: GwiezdnaFlota.Game.GameStatus.SaveScore()
+  nameWithType: GameStatus.SaveScore()
+- uid: GwiezdnaFlota.Game.GameStatus.SaveScore*
+  name: SaveScore
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_SaveScore_
+  commentId: Overload:GwiezdnaFlota.Game.GameStatus.SaveScore
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Game.GameStatus.SaveScore
+  nameWithType: GameStatus.SaveScore
+- uid: GwiezdnaFlota.Game.GameStatus.session
+  name: session
+  href: api/GwiezdnaFlota.Game.GameStatus.html#GwiezdnaFlota_Game_GameStatus_session
+  commentId: F:GwiezdnaFlota.Game.GameStatus.session
+  fullName: GwiezdnaFlota.Game.GameStatus.session
+  nameWithType: GameStatus.session
+- uid: GwiezdnaFlota.GameWindow
+  name: GameWindow
+  href: api/GwiezdnaFlota.GameWindow.html
+  commentId: T:GwiezdnaFlota.GameWindow
+  fullName: GwiezdnaFlota.GameWindow
+  nameWithType: GameWindow
+- uid: GwiezdnaFlota.GameWindow.#ctor
+  name: GameWindow()
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow__ctor
+  commentId: M:GwiezdnaFlota.GameWindow.#ctor
+  fullName: GwiezdnaFlota.GameWindow.GameWindow()
+  nameWithType: GameWindow.GameWindow()
+- uid: GwiezdnaFlota.GameWindow.#ctor*
+  name: GameWindow
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow__ctor_
+  commentId: Overload:GwiezdnaFlota.GameWindow.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.GameWindow
+  nameWithType: GameWindow.GameWindow
+- uid: GwiezdnaFlota.GameWindow.Allies
+  name: Allies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Allies
+  commentId: F:GwiezdnaFlota.GameWindow.Allies
+  fullName: GwiezdnaFlota.GameWindow.Allies
+  nameWithType: GameWindow.Allies
+- uid: GwiezdnaFlota.GameWindow.CheckLocation(System.Object,System.EventArgs)
+  name: CheckLocation(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_CheckLocation_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.CheckLocation(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.CheckLocation(System.Object, System.EventArgs)
+  nameWithType: GameWindow.CheckLocation(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.CheckLocation*
+  name: CheckLocation
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_CheckLocation_
+  commentId: Overload:GwiezdnaFlota.GameWindow.CheckLocation
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.CheckLocation
+  nameWithType: GameWindow.CheckLocation
+- uid: GwiezdnaFlota.GameWindow.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Dispose_System_Boolean_
+  commentId: M:GwiezdnaFlota.GameWindow.Dispose(System.Boolean)
+  fullName: GwiezdnaFlota.GameWindow.Dispose(System.Boolean)
+  nameWithType: GameWindow.Dispose(Boolean)
+- uid: GwiezdnaFlota.GameWindow.Dispose*
+  name: Dispose
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Dispose_
+  commentId: Overload:GwiezdnaFlota.GameWindow.Dispose
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.Dispose
+  nameWithType: GameWindow.Dispose
+- uid: GwiezdnaFlota.GameWindow.Enemies
+  name: Enemies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Enemies
+  commentId: F:GwiezdnaFlota.GameWindow.Enemies
+  fullName: GwiezdnaFlota.GameWindow.Enemies
+  nameWithType: GameWindow.Enemies
+- uid: GwiezdnaFlota.GameWindow.GamePanel_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)
+  name: GamePanel_MouseClick(Object, MouseEventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GamePanel_MouseClick_System_Object_System_Windows_Forms_MouseEventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.GamePanel_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)
+  fullName: GwiezdnaFlota.GameWindow.GamePanel_MouseClick(System.Object, System.Windows.Forms.MouseEventArgs)
+  nameWithType: GameWindow.GamePanel_MouseClick(Object, MouseEventArgs)
+- uid: GwiezdnaFlota.GameWindow.GamePanel_MouseClick*
+  name: GamePanel_MouseClick
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GamePanel_MouseClick_
+  commentId: Overload:GwiezdnaFlota.GameWindow.GamePanel_MouseClick
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.GamePanel_MouseClick
+  nameWithType: GameWindow.GamePanel_MouseClick
+- uid: GwiezdnaFlota.GameWindow.GamePanel_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)
+  name: GamePanel_MouseMove(Object, MouseEventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GamePanel_MouseMove_System_Object_System_Windows_Forms_MouseEventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.GamePanel_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)
+  fullName: GwiezdnaFlota.GameWindow.GamePanel_MouseMove(System.Object, System.Windows.Forms.MouseEventArgs)
+  nameWithType: GameWindow.GamePanel_MouseMove(Object, MouseEventArgs)
+- uid: GwiezdnaFlota.GameWindow.GamePanel_MouseMove*
+  name: GamePanel_MouseMove
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GamePanel_MouseMove_
+  commentId: Overload:GwiezdnaFlota.GameWindow.GamePanel_MouseMove
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.GamePanel_MouseMove
+  nameWithType: GameWindow.GamePanel_MouseMove
+- uid: GwiezdnaFlota.GameWindow.GameWindow_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  name: GameWindow_FormClosed(Object, FormClosedEventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GameWindow_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.GameWindow_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  fullName: GwiezdnaFlota.GameWindow.GameWindow_FormClosed(System.Object, System.Windows.Forms.FormClosedEventArgs)
+  nameWithType: GameWindow.GameWindow_FormClosed(Object, FormClosedEventArgs)
+- uid: GwiezdnaFlota.GameWindow.GameWindow_FormClosed*
+  name: GameWindow_FormClosed
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GameWindow_FormClosed_
+  commentId: Overload:GwiezdnaFlota.GameWindow.GameWindow_FormClosed
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.GameWindow_FormClosed
+  nameWithType: GameWindow.GameWindow_FormClosed
+- uid: GwiezdnaFlota.GameWindow.NextLevelButton_Click(System.Object,System.EventArgs)
+  name: NextLevelButton_Click(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_NextLevelButton_Click_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.NextLevelButton_Click(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.NextLevelButton_Click(System.Object, System.EventArgs)
+  nameWithType: GameWindow.NextLevelButton_Click(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.NextLevelButton_Click*
+  name: NextLevelButton_Click
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_NextLevelButton_Click_
+  commentId: Overload:GwiezdnaFlota.GameWindow.NextLevelButton_Click
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.NextLevelButton_Click
+  nameWithType: GameWindow.NextLevelButton_Click
+- uid: GwiezdnaFlota.GameWindow.NpcClicked(System.Object,System.EventArgs)
+  name: NpcClicked(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_NpcClicked_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.NpcClicked(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.NpcClicked(System.Object, System.EventArgs)
+  nameWithType: GameWindow.NpcClicked(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.NpcClicked*
+  name: NpcClicked
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_NpcClicked_
+  commentId: Overload:GwiezdnaFlota.GameWindow.NpcClicked
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.NpcClicked
+  nameWithType: GameWindow.NpcClicked
+- uid: GwiezdnaFlota.GameWindow.Reset
+  name: Reset()
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Reset
+  commentId: M:GwiezdnaFlota.GameWindow.Reset
+  fullName: GwiezdnaFlota.GameWindow.Reset()
+  nameWithType: GameWindow.Reset()
+- uid: GwiezdnaFlota.GameWindow.Reset*
+  name: Reset
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Reset_
+  commentId: Overload:GwiezdnaFlota.GameWindow.Reset
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.Reset
+  nameWithType: GameWindow.Reset
+- uid: GwiezdnaFlota.GameWindow.RestartLevelButton_Click(System.Object,System.EventArgs)
+  name: RestartLevelButton_Click(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_RestartLevelButton_Click_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.RestartLevelButton_Click(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.RestartLevelButton_Click(System.Object, System.EventArgs)
+  nameWithType: GameWindow.RestartLevelButton_Click(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.RestartLevelButton_Click*
+  name: RestartLevelButton_Click
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_RestartLevelButton_Click_
+  commentId: Overload:GwiezdnaFlota.GameWindow.RestartLevelButton_Click
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.RestartLevelButton_Click
+  nameWithType: GameWindow.RestartLevelButton_Click
+- uid: GwiezdnaFlota.GameWindow.TimTickGenerateAllies(System.Object,System.EventArgs)
+  name: TimTickGenerateAllies(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_TimTickGenerateAllies_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.TimTickGenerateAllies(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.TimTickGenerateAllies(System.Object, System.EventArgs)
+  nameWithType: GameWindow.TimTickGenerateAllies(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.TimTickGenerateAllies*
+  name: TimTickGenerateAllies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_TimTickGenerateAllies_
+  commentId: Overload:GwiezdnaFlota.GameWindow.TimTickGenerateAllies
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.TimTickGenerateAllies
+  nameWithType: GameWindow.TimTickGenerateAllies
+- uid: GwiezdnaFlota.GameWindow.TimTickGenerateEnemies(System.Object,System.EventArgs)
+  name: TimTickGenerateEnemies(Object, EventArgs)
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_TimTickGenerateEnemies_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.GameWindow.TimTickGenerateEnemies(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.GameWindow.TimTickGenerateEnemies(System.Object, System.EventArgs)
+  nameWithType: GameWindow.TimTickGenerateEnemies(Object, EventArgs)
+- uid: GwiezdnaFlota.GameWindow.TimTickGenerateEnemies*
+  name: TimTickGenerateEnemies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_TimTickGenerateEnemies_
+  commentId: Overload:GwiezdnaFlota.GameWindow.TimTickGenerateEnemies
+  isSpec: "True"
+  fullName: GwiezdnaFlota.GameWindow.TimTickGenerateEnemies
+  nameWithType: GameWindow.TimTickGenerateEnemies
+- uid: GwiezdnaFlota.Models
+  name: GwiezdnaFlota.Models
+  href: api/GwiezdnaFlota.Models.html
+  commentId: N:GwiezdnaFlota.Models
+  fullName: GwiezdnaFlota.Models
+  nameWithType: GwiezdnaFlota.Models
+- uid: GwiezdnaFlota.Models.Ally
+  name: Ally
+  href: api/GwiezdnaFlota.Models.Ally.html
+  commentId: T:GwiezdnaFlota.Models.Ally
+  fullName: GwiezdnaFlota.Models.Ally
+  nameWithType: Ally
+- uid: GwiezdnaFlota.Models.Ally.#ctor(System.Int32,System.Int32)
+  name: Ally(Int32, Int32)
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally__ctor_System_Int32_System_Int32_
+  commentId: M:GwiezdnaFlota.Models.Ally.#ctor(System.Int32,System.Int32)
+  fullName: GwiezdnaFlota.Models.Ally.Ally(System.Int32, System.Int32)
+  nameWithType: Ally.Ally(Int32, Int32)
+- uid: GwiezdnaFlota.Models.Ally.#ctor*
+  name: Ally
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally__ctor_
+  commentId: Overload:GwiezdnaFlota.Models.Ally.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Ally.Ally
+  nameWithType: Ally.Ally
+- uid: GwiezdnaFlota.Models.Ally.Explode(System.Object,System.Windows.Forms.MouseEventArgs)
+  name: Explode(Object, MouseEventArgs)
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_Explode_System_Object_System_Windows_Forms_MouseEventArgs_
+  commentId: M:GwiezdnaFlota.Models.Ally.Explode(System.Object,System.Windows.Forms.MouseEventArgs)
+  fullName: GwiezdnaFlota.Models.Ally.Explode(System.Object, System.Windows.Forms.MouseEventArgs)
+  nameWithType: Ally.Explode(Object, MouseEventArgs)
+- uid: GwiezdnaFlota.Models.Ally.Explode*
+  name: Explode
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_Explode_
+  commentId: Overload:GwiezdnaFlota.Models.Ally.Explode
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Ally.Explode
+  nameWithType: Ally.Explode
+- uid: GwiezdnaFlota.Models.Ally.MoveX(System.Object,System.EventArgs)
+  name: MoveX(Object, EventArgs)
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_MoveX_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.Models.Ally.MoveX(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.Models.Ally.MoveX(System.Object, System.EventArgs)
+  nameWithType: Ally.MoveX(Object, EventArgs)
+- uid: GwiezdnaFlota.Models.Ally.MoveX*
+  name: MoveX
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_MoveX_
+  commentId: Overload:GwiezdnaFlota.Models.Ally.MoveX
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Ally.MoveX
+  nameWithType: Ally.MoveX
+- uid: GwiezdnaFlota.Models.Ally.x
+  name: x
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_x
+  commentId: F:GwiezdnaFlota.Models.Ally.x
+  fullName: GwiezdnaFlota.Models.Ally.x
+  nameWithType: Ally.x
+- uid: GwiezdnaFlota.Models.Ally.y
+  name: y
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_y
+  commentId: F:GwiezdnaFlota.Models.Ally.y
+  fullName: GwiezdnaFlota.Models.Ally.y
+  nameWithType: Ally.y
+- uid: GwiezdnaFlota.Models.Enemy
+  name: Enemy
+  href: api/GwiezdnaFlota.Models.Enemy.html
+  commentId: T:GwiezdnaFlota.Models.Enemy
+  fullName: GwiezdnaFlota.Models.Enemy
+  nameWithType: Enemy
+- uid: GwiezdnaFlota.Models.Enemy.#ctor(System.Int32,System.Int32)
+  name: Enemy(Int32, Int32)
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy__ctor_System_Int32_System_Int32_
+  commentId: M:GwiezdnaFlota.Models.Enemy.#ctor(System.Int32,System.Int32)
+  fullName: GwiezdnaFlota.Models.Enemy.Enemy(System.Int32, System.Int32)
+  nameWithType: Enemy.Enemy(Int32, Int32)
+- uid: GwiezdnaFlota.Models.Enemy.#ctor*
+  name: Enemy
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy__ctor_
+  commentId: Overload:GwiezdnaFlota.Models.Enemy.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Enemy.Enemy
+  nameWithType: Enemy.Enemy
+- uid: GwiezdnaFlota.Models.Enemy.Explode(System.Object,System.Windows.Forms.MouseEventArgs)
+  name: Explode(Object, MouseEventArgs)
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_Explode_System_Object_System_Windows_Forms_MouseEventArgs_
+  commentId: M:GwiezdnaFlota.Models.Enemy.Explode(System.Object,System.Windows.Forms.MouseEventArgs)
+  fullName: GwiezdnaFlota.Models.Enemy.Explode(System.Object, System.Windows.Forms.MouseEventArgs)
+  nameWithType: Enemy.Explode(Object, MouseEventArgs)
+- uid: GwiezdnaFlota.Models.Enemy.Explode*
+  name: Explode
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_Explode_
+  commentId: Overload:GwiezdnaFlota.Models.Enemy.Explode
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Enemy.Explode
+  nameWithType: Enemy.Explode
+- uid: GwiezdnaFlota.Models.Enemy.MoveX(System.Object,System.EventArgs)
+  name: MoveX(Object, EventArgs)
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_MoveX_System_Object_System_EventArgs_
+  commentId: M:GwiezdnaFlota.Models.Enemy.MoveX(System.Object,System.EventArgs)
+  fullName: GwiezdnaFlota.Models.Enemy.MoveX(System.Object, System.EventArgs)
+  nameWithType: Enemy.MoveX(Object, EventArgs)
+- uid: GwiezdnaFlota.Models.Enemy.MoveX*
+  name: MoveX
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_MoveX_
+  commentId: Overload:GwiezdnaFlota.Models.Enemy.MoveX
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Enemy.MoveX
+  nameWithType: Enemy.MoveX
+- uid: GwiezdnaFlota.Models.Enemy.x
+  name: x
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_x
+  commentId: F:GwiezdnaFlota.Models.Enemy.x
+  fullName: GwiezdnaFlota.Models.Enemy.x
+  nameWithType: Enemy.x
+- uid: GwiezdnaFlota.Models.Enemy.y
+  name: y
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_y
+  commentId: F:GwiezdnaFlota.Models.Enemy.y
+  fullName: GwiezdnaFlota.Models.Enemy.y
+  nameWithType: Enemy.y
+- uid: GwiezdnaFlota.Models.Laser
+  name: Laser
+  href: api/GwiezdnaFlota.Models.Laser.html
+  commentId: T:GwiezdnaFlota.Models.Laser
+  fullName: GwiezdnaFlota.Models.Laser
+  nameWithType: Laser
+- uid: GwiezdnaFlota.Models.Laser.#ctor
+  name: Laser()
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser__ctor
+  commentId: M:GwiezdnaFlota.Models.Laser.#ctor
+  fullName: GwiezdnaFlota.Models.Laser.Laser()
+  nameWithType: Laser.Laser()
+- uid: GwiezdnaFlota.Models.Laser.#ctor*
+  name: Laser
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser__ctor_
+  commentId: Overload:GwiezdnaFlota.Models.Laser.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Laser.Laser
+  nameWithType: Laser.Laser
+- uid: GwiezdnaFlota.Models.Laser.currX
+  name: currX
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_currX
+  commentId: F:GwiezdnaFlota.Models.Laser.currX
+  fullName: GwiezdnaFlota.Models.Laser.currX
+  nameWithType: Laser.currX
+- uid: GwiezdnaFlota.Models.Laser.currY
+  name: currY
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_currY
+  commentId: F:GwiezdnaFlota.Models.Laser.currY
+  fullName: GwiezdnaFlota.Models.Laser.currY
+  nameWithType: Laser.currY
+- uid: GwiezdnaFlota.Models.Laser.PlayLaserSound
+  name: PlayLaserSound()
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_PlayLaserSound
+  commentId: M:GwiezdnaFlota.Models.Laser.PlayLaserSound
+  fullName: GwiezdnaFlota.Models.Laser.PlayLaserSound()
+  nameWithType: Laser.PlayLaserSound()
+- uid: GwiezdnaFlota.Models.Laser.PlayLaserSound*
+  name: PlayLaserSound
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_PlayLaserSound_
+  commentId: Overload:GwiezdnaFlota.Models.Laser.PlayLaserSound
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Laser.PlayLaserSound
+  nameWithType: Laser.PlayLaserSound
+- uid: GwiezdnaFlota.Models.Laser.Shoot(System.Int32,System.Int32,System.Drawing.Pen,System.Drawing.Graphics)
+  name: Shoot(Int32, Int32, Pen, Graphics)
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_Shoot_System_Int32_System_Int32_System_Drawing_Pen_System_Drawing_Graphics_
+  commentId: M:GwiezdnaFlota.Models.Laser.Shoot(System.Int32,System.Int32,System.Drawing.Pen,System.Drawing.Graphics)
+  fullName: GwiezdnaFlota.Models.Laser.Shoot(System.Int32, System.Int32, System.Drawing.Pen, System.Drawing.Graphics)
+  nameWithType: Laser.Shoot(Int32, Int32, Pen, Graphics)
+- uid: GwiezdnaFlota.Models.Laser.Shoot*
+  name: Shoot
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_Shoot_
+  commentId: Overload:GwiezdnaFlota.Models.Laser.Shoot
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Laser.Shoot
+  nameWithType: Laser.Shoot
+- uid: GwiezdnaFlota.Models.Laser.x
+  name: x
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_x
+  commentId: F:GwiezdnaFlota.Models.Laser.x
+  fullName: GwiezdnaFlota.Models.Laser.x
+  nameWithType: Laser.x
+- uid: GwiezdnaFlota.Models.Laser.y
+  name: y
+  href: api/GwiezdnaFlota.Models.Laser.html#GwiezdnaFlota_Models_Laser_y
+  commentId: F:GwiezdnaFlota.Models.Laser.y
+  fullName: GwiezdnaFlota.Models.Laser.y
+  nameWithType: Laser.y
+- uid: GwiezdnaFlota.Models.Player
+  name: Player
+  href: api/GwiezdnaFlota.Models.Player.html
+  commentId: T:GwiezdnaFlota.Models.Player
+  fullName: GwiezdnaFlota.Models.Player
+  nameWithType: Player
+- uid: GwiezdnaFlota.Models.Player.#ctor(System.Int32,System.Int32)
+  name: Player(Int32, Int32)
+  href: api/GwiezdnaFlota.Models.Player.html#GwiezdnaFlota_Models_Player__ctor_System_Int32_System_Int32_
+  commentId: M:GwiezdnaFlota.Models.Player.#ctor(System.Int32,System.Int32)
+  fullName: GwiezdnaFlota.Models.Player.Player(System.Int32, System.Int32)
+  nameWithType: Player.Player(Int32, Int32)
+- uid: GwiezdnaFlota.Models.Player.#ctor*
+  name: Player
+  href: api/GwiezdnaFlota.Models.Player.html#GwiezdnaFlota_Models_Player__ctor_
+  commentId: Overload:GwiezdnaFlota.Models.Player.#ctor
+  isSpec: "True"
+  fullName: GwiezdnaFlota.Models.Player.Player
+  nameWithType: Player.Player
+- uid: GwiezdnaFlota.Models.Player.x
+  name: x
+  href: api/GwiezdnaFlota.Models.Player.html#GwiezdnaFlota_Models_Player_x
+  commentId: F:GwiezdnaFlota.Models.Player.x
+  fullName: GwiezdnaFlota.Models.Player.x
+  nameWithType: Player.x
+- uid: GwiezdnaFlota.Models.Player.y
+  name: y
+  href: api/GwiezdnaFlota.Models.Player.html#GwiezdnaFlota_Models_Player_y
+  commentId: F:GwiezdnaFlota.Models.Player.y
+  fullName: GwiezdnaFlota.Models.Player.y
+  nameWithType: Player.y

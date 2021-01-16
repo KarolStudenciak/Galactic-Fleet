@@ -13,12 +13,19 @@ using System.Media;
 
 namespace GwiezdnaFlota.Models
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za obsługę wroga
+    /// </summary>
     public class Enemy : PictureBox
     {
         public int x, y;
-
+        /// <summary>
+        /// Timer w takt którego wróg będzie przesuwany
+        /// </summary>
         readonly Timer MovEnemyTim = new Timer();
-
+        /// <summary>
+        /// Konstruktor konfiguruje parametry obiektu, obrazek położenie, reakcja na zdarzenia etc.
+        /// </summary>
         public Enemy(int x, int y)
         {
             this.x = x;
@@ -35,14 +42,18 @@ namespace GwiezdnaFlota.Models
             MovEnemyTim.Interval = 1300;
             MovEnemyTim.Start();
         }
-
+        /// <summary>
+        /// Metoda porusza wroga w takt zegara
+        /// </summary>
         public void MoveX(object sender, EventArgs e)
         {
             x -= 70;
             Left = x;
             Invalidate();
         }
-
+        /// <summary>
+        /// Metoda przywołana gdy wróg zostaje trafiony, odtwarza dźwięk wybuchu
+        /// </summary>
         public void Explode(object sender, MouseEventArgs e)
         {
             Stream str = Resources.explosionsound;

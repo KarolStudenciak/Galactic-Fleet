@@ -117,5 +117,55 @@ namespace GwiezdnaFlota.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 
+        ///Sesja : 15.01.2021 20:42:20 
+        ///Wynik: -20
+        ///Level: 1
+        ///
+        ///Sesja : 15.01.2021 20:44:26 
+        ///Wynik: 0
+        ///Level: 1
+        ///
+        ///Sesja : 15.01.2021 20:44:53 
+        ///Wynik: 10
+        ///Level: 1
+        ///
+        ///Sesja : 15.01.2021 20:45:37 
+        ///Wynik: -40
+        ///Level: 2
+        ///
+        ///Sesja : 15.01.2021 20:48:57 
+        ///Wynik: -20
+        ///Level: 2
+        ///
+        ///Sesja : 15.01.2021 20:54:24 
+        ///Wynik: 0
+        ///Level: 2
+        ///
+        ///Sesja : 15.01.2021 21:07:39 
+        ///Wynik: 220
+        ///Level: 1
+        ///
+        ///Sesja : 15.01.2021 21:08:23 
+        ///Wynik: 0
+        ///Level: 2
+        ///
+        ///Sesja : 15.01.2021 21:09:36 
+        ///Wynik: -30
+        ///Level: 2
+        ///
+        ///Sesja : 15.01.2021 21:32:21 
+        ///Wynik: 0
+        ///Level: 1
+        ///
+        ///Sesja : 15 [obcięto pozostałą część ciągu]&quot;;.
+        /// </summary>
+        internal static string Wyniki {
+            get {
+                return ResourceManager.GetString("Wyniki", resourceCulture);
+            }
+        }
     }
 }

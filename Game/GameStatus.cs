@@ -1,4 +1,5 @@
 ﻿using GwiezdnaFlota.Models;
+using GwiezdnaFlota.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,11 +10,14 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Game
 {
+    /// <summary>
+    /// Klasa sterująca poziomem, punktacją i dokumentowaniem rozgrywki
+    /// </summary>
     public class GameStatus 
     {
         public int points;
         public int level = 1;
-        public DateTime sesion = DateTime.Now;
+        public DateTime session = DateTime.Now;
       
         public GameStatus()
         {
@@ -29,14 +33,18 @@ namespace GwiezdnaFlota.Game
         {
             level++;
         }
-
+        /// <summary>
+        /// Metoda otwiera strumień do pliku tekstowego, zanotowuje dane rozgrywki po czym zamyka strumień
+        /// </summary>
         public void SaveScore()
-        {            
-            StreamWriter str = new StreamWriter(@"C:\Users\karol\Desktop\C#\GwiezdnaFlota\Galactic-Fleet\Wyniki.txt", true);
+        {
+            string path = Environment.CurrentDirectory + "Score.txt";
 
+            StreamWriter str = new StreamWriter(path, true);
+            
             using (str)
             {
-                str.WriteLine($"\nSesja : {sesion} \n" + "Wynik: " + points + "\n" + $"Level: {level}");
+                str.WriteLine($"\nSesja : {session} \n" + "Wynik: " + points + "\n" + $"Level: {level}");
             }
         }
     }

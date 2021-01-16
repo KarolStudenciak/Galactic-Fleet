@@ -13,7 +13,9 @@ namespace GwiezdnaFlota.Models
     {
         public int x;
         public int y;
-
+        /// <summary>
+        /// Konstruktor ustalający parametry PictureBoxa jakim jest gracz
+        /// </summary>
         public Player(int x, int y) 
         {
             this.x = x;

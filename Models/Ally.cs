@@ -13,12 +13,19 @@ using System.Windows.Forms;
 
 namespace GwiezdnaFlota.Models
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za obsługę sojusznika
+    /// </summary>
     public class Ally : PictureBox
     {
         public int x, y;
-
+        /// <summary>
+        /// W rytm tego timera, przesuwany bedzie obiekt sojusznika
+        /// </summary>
         readonly Timer MovAllyTim = new Timer();
- 
+        /// <summary>
+        /// Konstruktor konfigurujący parametry picture boxa - dodawanie EventHandler, obrazek etc.
+        /// </summary>
         public Ally(int x, int y)
         {
             this.x = x;
@@ -35,14 +42,18 @@ namespace GwiezdnaFlota.Models
             MovAllyTim.Interval = 1200;
             MovAllyTim.Start();
         }
-
+        /// <summary>
+        /// Metoda przesuwająca obiekt w rytm timera
+        /// </summary>
         public void MoveX(object sender, EventArgs e)
         {
             x -= 70;
             Left = x;
             Invalidate();
         }
-
+        /// <summary>
+        /// Metoda wywoływana gdy obiekt zostanie trafiony (kliknięty) - odtwarza dźwięk wybuchu
+        /// </summary>
         public void Explode(object sender, MouseEventArgs e)
         {
             Stream str = Resources.explosionsound;

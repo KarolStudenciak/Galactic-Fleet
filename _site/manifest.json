@@ -1,0 +1,234 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/karol/Desktop/C#/GwiezdnaFlota/Galactic-Fleet",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "AzKfXZkXAsPVLS+Df8CRSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "0DlDx/ptHFNXLVUk7s69tA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "u/NtInuVDCNtbKirxPGKYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Game.GameStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Game.GameStatus.html",
+          "hash": "F6gNUoD1n6Co35EAfRBeRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Game.html",
+          "hash": "Z+kleHkgyJgMHBjYl8hKag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.GameWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.GameWindow.html",
+          "hash": "BTvFBPYdgcaVAGA7BSmeow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Models.Ally.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Models.Ally.html",
+          "hash": "uFhJLaAp7iaOoDdUuMo3SA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Models.Enemy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Models.Enemy.html",
+          "hash": "qtYnnVp3+UFS6womq68f6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Models.Laser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Models.Laser.html",
+          "hash": "TA07opBihX1glBJjnuLlAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Models.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Models.Player.html",
+          "hash": "ELkCjzGpaNGhm/AE4yITrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.Models.html",
+          "hash": "lfYrWUt9MWj78x69tat22A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/GwiezdnaFlota.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GwiezdnaFlota.html",
+          "hash": "Hh158YOaOarL8JzrTyi/yw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "soTL+N/0mjFoc3vPV8TKVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "G2AoE5T/2VarbHvzLEo4TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 9,
+          "skipped_file_count": 9
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

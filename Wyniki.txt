@@ -34,3 +34,39 @@ Level: 2
 Sesja : 15.01.2021 21:09:36 
 Wynik: -30
 Level: 2
+
+Sesja : 15.01.2021 21:32:21 
+Wynik: 0
+Level: 1
+
+Sesja : 15.01.2021 21:54:01 
+Wynik: 0
+Level: 1
+
+Sesja : 15.01.2021 21:58:56 
+Wynik: 0
+Level: 1
+
+Sesja : 15.01.2021 22:14:07 
+Wynik: 0
+Level: 1
+
+Sesja : 15.01.2021 22:15:16 
+Wynik: 0
+Level: 1
+
+Sesja : 15.01.2021 22:32:01 
+Wynik: -10
+Level: 2
+
+Sesja : 16.01.2021 01:25:06 
+Wynik: 40
+Level: 2
+
+Sesja : 16.01.2021 12:19:12 
+Wynik: 20
+Level: 1
+
+Sesja : 16.01.2021 12:24:54 
+Wynik: 0
+Level: 1
