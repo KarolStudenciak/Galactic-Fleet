@@ -22,11 +22,11 @@ namespace GwiezdnaFlota
         /// <summary>
         /// Timer w takt którego generowani są sojusznicy
         /// </summary>
-        readonly Timer GenAllies = new Timer();
+        public readonly Timer GenAllies = new Timer();
         /// <summary>
         /// Timer w takt którego generowani są wrogowie
         /// </summary>
-        readonly Timer GenEnemies = new Timer();
+        public readonly Timer GenEnemies = new Timer();
         /// <summary>
         /// Lista przechowująca sojuszników - tyle ile jest/było aktualnie w użyciu
         /// </summary>
@@ -75,7 +75,6 @@ namespace GwiezdnaFlota
             var enemy = new Enemy(GamePanel.Right, r.Next(GamePanel.Top, player.Bounds.Top-32));
 
             enemy.MouseClick += new MouseEventHandler(NpcClicked);
-            enemy.LocationChanged += new EventHandler(CheckLocation);
             
             Enemies.Add(enemy);
 
@@ -108,7 +107,6 @@ namespace GwiezdnaFlota
             var ally = new Ally(GamePanel.Right, r.Next(GamePanel.Top, player.Bounds.Top-32));
 
             ally.MouseClick += new MouseEventHandler(NpcClicked);
-            ally.LocationChanged += new EventHandler(CheckLocation);
 
             Allies.Add(ally);
 
@@ -132,34 +130,6 @@ namespace GwiezdnaFlota
             }           
         }
         /// <summary>
-        /// Metoda reagująca na dotarcie obiektów do bazy - liczy punkty, zwiększa poziom jeśli obiekty się skończyły
-        /// </summary>
-        public void CheckLocation(object sender, EventArgs e)
-        {
-            PictureBox npc = sender as PictureBox;
-
-            if (npc.Bounds.IntersectsWith(GamePanel.Bounds) && npc.Left <= 0) 
-            {
-                GamePanel.Controls.Remove(npc);
-                Refresh();
-                Console.WriteLine(GamePanel.Controls.Count);
-                npc.Location = new Point(5000, npc.Location.Y);
-
-                if (npc.GetType() == typeof(Enemy)) GameStatus.points -= 10;
-                if (npc.GetType() == typeof(Ally)) GameStatus.points += 10;
-
-
-                 
-                ScoreTextBox.Text = $"Score: {GameStatus.points}";
-
-                if (GamePanel.Controls.Count == 1 && GameStatus.level < 2)
-                {
-                    GameStatus.level++;
-                    Reset();
-                }
-            }         
-        }
-        /// <summary>
         /// Metoda obsługująca kliknięty obiekt - naliczanie punktów, usuwanie zestrzelonego obiektu
         /// </summary>
         public void NpcClicked(object sender, EventArgs e)
@@ -171,10 +141,9 @@ namespace GwiezdnaFlota
             if (clickedPictureBox.GetType() == typeof(Ally)) GameStatus.points -= 10;
             if (clickedPictureBox.GetType() == typeof(Enemy)) GameStatus.points += 10;
 
-            Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top, Pen, Graphics);
+            Laser.Shoot(clickedPictureBox.Left, clickedPictureBox.Top+clickedPictureBox.Size.Height/2, Pen, Graphics);
             
             GamePanel.Controls.Remove(clickedPictureBox);
-            Console.WriteLine(GamePanel.Controls.Count);
             
             ScoreTextBox.Text = $"Score: {GameStatus.points}";
           
@@ -248,7 +217,15 @@ namespace GwiezdnaFlota
         /// </summary>
         public void GameWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
+            string message;
+            string title = "Koniec gry";
             GameStatus.SaveScore();
+
+            if (GameStatus.points > 0) message = $"Gratulacje! Wynik: {GameStatus.points}\n Ćwicz dalej!";
+            else
+                message = "Będzie lepiej! Próbuj dalej!";
+
+            MessageBox.Show(message, title);
         }
     }
 }

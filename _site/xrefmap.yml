@@ -114,19 +114,6 @@ references:
   commentId: F:GwiezdnaFlota.GameWindow.Allies
   fullName: GwiezdnaFlota.GameWindow.Allies
   nameWithType: GameWindow.Allies
-- uid: GwiezdnaFlota.GameWindow.CheckLocation(System.Object,System.EventArgs)
-  name: CheckLocation(Object, EventArgs)
-  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_CheckLocation_System_Object_System_EventArgs_
-  commentId: M:GwiezdnaFlota.GameWindow.CheckLocation(System.Object,System.EventArgs)
-  fullName: GwiezdnaFlota.GameWindow.CheckLocation(System.Object, System.EventArgs)
-  nameWithType: GameWindow.CheckLocation(Object, EventArgs)
-- uid: GwiezdnaFlota.GameWindow.CheckLocation*
-  name: CheckLocation
-  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_CheckLocation_
-  commentId: Overload:GwiezdnaFlota.GameWindow.CheckLocation
-  isSpec: "True"
-  fullName: GwiezdnaFlota.GameWindow.CheckLocation
-  nameWithType: GameWindow.CheckLocation
 - uid: GwiezdnaFlota.GameWindow.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_Dispose_System_Boolean_
@@ -185,6 +172,18 @@ references:
   isSpec: "True"
   fullName: GwiezdnaFlota.GameWindow.GameWindow_FormClosed
   nameWithType: GameWindow.GameWindow_FormClosed
+- uid: GwiezdnaFlota.GameWindow.GenAllies
+  name: GenAllies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GenAllies
+  commentId: F:GwiezdnaFlota.GameWindow.GenAllies
+  fullName: GwiezdnaFlota.GameWindow.GenAllies
+  nameWithType: GameWindow.GenAllies
+- uid: GwiezdnaFlota.GameWindow.GenEnemies
+  name: GenEnemies
+  href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_GenEnemies
+  commentId: F:GwiezdnaFlota.GameWindow.GenEnemies
+  fullName: GwiezdnaFlota.GameWindow.GenEnemies
+  nameWithType: GameWindow.GenEnemies
 - uid: GwiezdnaFlota.GameWindow.NextLevelButton_Click(System.Object,System.EventArgs)
   name: NextLevelButton_Click(Object, EventArgs)
   href: api/GwiezdnaFlota.GameWindow.html#GwiezdnaFlota_GameWindow_NextLevelButton_Click_System_Object_System_EventArgs_
@@ -301,6 +300,12 @@ references:
   isSpec: "True"
   fullName: GwiezdnaFlota.Models.Ally.Explode
   nameWithType: Ally.Explode
+- uid: GwiezdnaFlota.Models.Ally.MovAllyTim
+  name: MovAllyTim
+  href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_MovAllyTim
+  commentId: F:GwiezdnaFlota.Models.Ally.MovAllyTim
+  fullName: GwiezdnaFlota.Models.Ally.MovAllyTim
+  nameWithType: Ally.MovAllyTim
 - uid: GwiezdnaFlota.Models.Ally.MoveX(System.Object,System.EventArgs)
   name: MoveX(Object, EventArgs)
   href: api/GwiezdnaFlota.Models.Ally.html#GwiezdnaFlota_Models_Ally_MoveX_System_Object_System_EventArgs_
@@ -358,6 +363,12 @@ references:
   isSpec: "True"
   fullName: GwiezdnaFlota.Models.Enemy.Explode
   nameWithType: Enemy.Explode
+- uid: GwiezdnaFlota.Models.Enemy.MovEnemyTim
+  name: MovEnemyTim
+  href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_MovEnemyTim
+  commentId: F:GwiezdnaFlota.Models.Enemy.MovEnemyTim
+  fullName: GwiezdnaFlota.Models.Enemy.MovEnemyTim
+  nameWithType: Enemy.MovEnemyTim
 - uid: GwiezdnaFlota.Models.Enemy.MoveX(System.Object,System.EventArgs)
   name: MoveX(Object, EventArgs)
   href: api/GwiezdnaFlota.Models.Enemy.html#GwiezdnaFlota_Models_Enemy_MoveX_System_Object_System_EventArgs_

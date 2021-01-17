@@ -22,10 +22,12 @@ namespace GwiezdnaFlota.Models
         /// <summary>
         /// Timer w takt którego wróg będzie przesuwany
         /// </summary>
-        readonly Timer MovEnemyTim = new Timer();
+        public readonly Timer MovEnemyTim = new Timer();
         /// <summary>
         /// Konstruktor konfiguruje parametry obiektu, obrazek położenie, reakcja na zdarzenia etc.
         /// </summary>
+        /// <param name="x">Współrzędna X wygenerowanego obiektu</param>
+        /// <param name="y">Współrzędna Y wygenerowanego obiektu</param>
         public Enemy(int x, int y)
         {
             this.x = x;
@@ -33,7 +35,7 @@ namespace GwiezdnaFlota.Models
             Name = "enemy";
             Location = new Point(x, y);
             Image = Resources.enemytrans;
-            Size = new Size(32, 32);
+            Size = new Size(40, 40);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
             MouseClick += new MouseEventHandler(Explode);

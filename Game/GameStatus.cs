@@ -15,8 +15,17 @@ namespace GwiezdnaFlota.Game
     /// </summary>
     public class GameStatus 
     {
+        /// <summary>
+        /// Pole przechowujące ilość punktów
+        /// </summary>
         public int points;
+        /// <summary>
+        /// Pole przechowujące poziom
+        /// </summary>
         public int level = 1;
+        /// <summary>
+        /// Pole przechowujące datę i czas rozgrywki
+        /// </summary>
         public DateTime session = DateTime.Now;
       
         public GameStatus()
@@ -34,7 +43,7 @@ namespace GwiezdnaFlota.Game
             level++;
         }
         /// <summary>
-        /// Metoda otwiera strumień do pliku tekstowego, zanotowuje dane rozgrywki po czym zamyka strumień
+        /// Metoda otwiera strumień do pliku tekstowego, zanotowuje dane rozgrywki po czym zamyka strumień. Plik w folderze bin
         /// </summary>
         public void SaveScore()
         {

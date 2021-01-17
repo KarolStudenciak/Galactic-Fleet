@@ -39,6 +39,8 @@ namespace GwiezdnaFlota.Models
         /// <summary>
         /// Metoda rysująca strzał pobierająca obiekty klas Pen i Graphics
         /// </summary>
+        /// <param name="x">Współrzędna X miejsca kliknięcia myszką</param>
+        /// <param name="y">Współrzędna Y miejsca kliknięcia myszką</param>
         public void Shoot(int x, int y, Pen pen, Graphics line)
         {
             line.DrawLine(pen, currX, currY, x, y);

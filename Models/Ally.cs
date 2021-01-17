@@ -22,10 +22,12 @@ namespace GwiezdnaFlota.Models
         /// <summary>
         /// W rytm tego timera, przesuwany bedzie obiekt sojusznika
         /// </summary>
-        readonly Timer MovAllyTim = new Timer();
+        public readonly Timer MovAllyTim = new Timer();
         /// <summary>
         /// Konstruktor konfigurujący parametry picture boxa - dodawanie EventHandler, obrazek etc.
         /// </summary>
+        /// <param name="y">Współrzędna Y wygenerowanego obiektu</param>
+        /// <param name="x">Współrzędna X wygenerowanego obiektu</param>
         public Ally(int x, int y)
         {
             this.x = x;
@@ -33,7 +35,7 @@ namespace GwiezdnaFlota.Models
             Name = "ally";
             Location = new Point(x, y);
             Image = Resources.allytrans;
-            Size = new Size(32, 32);
+            Size = new Size(40, 40);
             SizeMode = PictureBoxSizeMode.StretchImage;
             BackColor = Color.Transparent;
             MouseClick += new MouseEventHandler(Explode);

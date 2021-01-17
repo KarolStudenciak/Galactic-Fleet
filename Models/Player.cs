@@ -14,8 +14,10 @@ namespace GwiezdnaFlota.Models
         public int x;
         public int y;
         /// <summary>
-        /// Konstruktor ustalający parametry PictureBoxa jakim jest gracz
+        /// Konstruktor ustalający parametry PictureBoxa jakim jest gracz np. lokalizacja na podstawie pól X i Y
         /// </summary>
+        /// <param name="y">Współrzędna Y lokalizacji gracza</param>
+        /// <param name="x">Współrzędna X lokalizacji gracza</param>
         public Player(int x, int y) 
         {
             this.x = x;
